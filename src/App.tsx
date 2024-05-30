@@ -3,8 +3,8 @@ import Cross from "/cross.png"
 import './App.css'
 
 function App() {
-  const [snacks, setSnacks] = useState([])
-  const [newSnack, setNewSnack] = useState("")
+  const [snacks, setSnacks] = useState<string[]>([]);
+  const [newSnack, setNewSnack] = useState<string>('');
 
   const PANTRY_API = import.meta.env.VITE_PANTRY_API
 
@@ -22,7 +22,7 @@ function App() {
     getData()
   }, [])
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     if (newSnack === "") {
       return
