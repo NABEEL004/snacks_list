@@ -95,10 +95,10 @@ function App() {
             Add Snack!
           </button>
         </form>
-        <ul className='flex flex-col gap-1'>
+        <ul className='flex flex-col gap-1 max-h-96 overflow-scroll'>
           {snacks.map(snack => (
             <div className='group flex flex-row justify-between items-center px-8'>
-              <li className='font-mono list-disc text-slate-800'>{snack}</li>
+              <li className='font-mono list-disc text-slate-800 max-w-[14rem]'>{snack}</li>
               <img 
                 src={Cross}
                 onClick={() => deleteSnack(snack)}
