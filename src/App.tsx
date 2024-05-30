@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Cross from "/cross.png"
+import Snack from "/snack.png"
 import './App.css'
 
 function App() {
@@ -73,9 +74,12 @@ function App() {
 
   return (
     <div className='bg-orange-300 h-screen w-screen flex flex-col items-center justify-center gap-4'>
-      <h1 className='text-3xl font-bold font-mochiy text-slate-800'>
-        Aliyah's Snacks
-      </h1>
+      <div className='flex items-center gap-2'>
+        <h1 className='text-3xl font-bold font-mochiy text-slate-800'>
+          Aliyah's Snacks 
+        </h1>
+        <img src={Snack} className='h-10'/>
+      </div>
       <div className='bg-white rounded-xl shadow-lg py-8 px-4 flex flex-col gap-4 w-[21rem]'>
         <form onSubmit={handleSubmit} className='flex gap-4'>
           <input 
